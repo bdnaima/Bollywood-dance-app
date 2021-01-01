@@ -1,0 +1,2 @@
+- Add picture for banner while video is loading
+- Cut out text at end of video
