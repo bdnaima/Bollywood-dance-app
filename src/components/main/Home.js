@@ -6,6 +6,7 @@ import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
 import kids from '../../assets/images/kids.jpg';
 import media from '../../assets/images/media.jpg';
+import orange from '../../assets/images/orange.jpg';
 import yoga from '../../assets/images/yoga.jpg';
 
 const StyledCard = styled(Card)`
@@ -13,7 +14,7 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardGroup = styled(CardGroup)`
-  background-color: lightgray;
+  background-image: url(${orange});
   margin-top: 5em;
   justify-content: space-around;
 `;
@@ -42,7 +43,7 @@ const Home = () => {
             muted
             style={{
               width: '100vw',
-              height: '36em',
+              height: '30em',
               position: "sticky",
               top: 0,
               zIndex: -1
@@ -52,7 +53,7 @@ const Home = () => {
           </video>
 
       {/* Card section */}
-      <div style={{backgroundColor:"lightGrey", marginTop: '5em'}}>
+      <div style={{backgroundImage:`url(${orange})`, marginTop: '5em',}}>
         <StyledCardGroup>
           <StyledCard>
             <Card.Img variant="top" src={ anoli } />
