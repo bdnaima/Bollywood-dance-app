@@ -1,6 +1,7 @@
 import React from 'react'
 import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
+import videoplayback from '../../assets/images/videoplayback.mp4'
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
 import kids from '../../assets/images/kids.jpg';
@@ -15,10 +16,17 @@ const StyledCardGroup = styled(CardGroup)`
   justify-content: space-around;
 `;
 
-const Classes = () => {
+const Media = () => {
   return (
     <>
-    
+        <video 
+        autoPlay 
+        loop 
+        muted
+        style={{width: '100%',height: '30rem',}}>
+        <source src={videoplayback} type="video/mp4"/>
+        </video>
+        
       {/* Card section */}
       <div style={{backgroundColor:"lightGrey"}}>
         <StyledCardGroup>
@@ -61,4 +69,4 @@ const Classes = () => {
   );
 }
   
-export default Classes;
+export default Media;

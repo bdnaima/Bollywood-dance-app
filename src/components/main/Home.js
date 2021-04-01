@@ -1,59 +1,35 @@
 import React from 'react'
 import { CardGroup, Card } from 'react-bootstrap';
+import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
-import videoplayback from '../../assets/images/videoplayback.mp4'
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
 import kids from '../../assets/images/kids.jpg';
 import media from '../../assets/images/media.jpg';
-import orange from '../../assets/images/orange.jpg';
 import yoga from '../../assets/images/yoga.jpg';
 
 const StyledCard = styled(Card)`
-  max-width: 18em;
+  max-width: 18rem;
+  margin: 0.5rem;
+  opacity: 0.8;
+
+  &:hover {
+        opacity: 0.5;
+    }
 `;
 
 const StyledCardGroup = styled(CardGroup)`
-  background-image: url(${orange});
-  margin-top: 5em;
+  margin: 2rem;
   justify-content: space-around;
 `;
 
 const Home = () => {
   return (
     <>
-    {/* Banner video */}
-        {/* <div 
-          alt="bollywood girls dancing" 
-          style={{
-            width: '100vw',
-            minHeight: '80vh',
-            backgroundImage: `url("${bollywoodvideo2}")`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed'
-          }}
-        /> */}
+      <ControlledCarousel />
 
-        
-          <video 
-            autoPlay 
-            loop 
-            muted
-            style={{
-              width: '100vw',
-              height: '30em',
-              position: "sticky",
-              top: 0,
-              zIndex: -1
-            }}
-            >
-            <source src={videoplayback} type="video/mp4"/>
-          </video>
-
-      {/* Card section */}
-      <div style={{backgroundImage:`url(${orange})`, marginTop: '5em',}}>
+      {/*Card section */}
+      <div>
         <StyledCardGroup>
           <StyledCard>
             <Card.Img variant="top" src={ anoli } />
@@ -91,7 +67,7 @@ const Home = () => {
 
         {/* Content's second section */}
         <StyledCardGroup>
-          <StyledCard style={{ maxWidth: '40vw' }}>
+          <StyledCard>
             <Card.Img variant="top" src={ media } />
             <Card.Body>
               <Card.Title>Media</Card.Title>
@@ -101,10 +77,20 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
           </StyledCard>
-          <StyledCard style={{ maxWidth: '40vw' }}>
+          <StyledCard>
             <Card.Img variant="top" src={ yoga }/>
             <Card.Body>
               <Card.Title>Yoga</Card.Title>
+              <Card.Text>
+                This card has supporting text below as a natural lead-in to additional
+                content.{' '}
+              </Card.Text>
+            </Card.Body>
+          </StyledCard>
+          <StyledCard>
+            <Card.Img variant="top" src={ yoga }/>
+            <Card.Body>
+              <Card.Title>About</Card.Title>
               <Card.Text>
                 This card has supporting text below as a natural lead-in to additional
                 content.{' '}

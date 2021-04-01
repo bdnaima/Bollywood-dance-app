@@ -4,8 +4,10 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Home from './components/main/Home';
 import Classes from './components/main/Classes';
+import Media from './components/main/Media'
 import Kids from './components/main/Kids';
 import About from './components/main/About';
+import Calendar from './components/main/Calender';
 import Footer from './components/layout/Footer';
 
 const App = () => {
@@ -15,6 +17,8 @@ const App = () => {
         <Navigation />
           <Route exact path='/' component={Home}/>
           <Route path='/classes' component={Classes}/>
+          <Route path='/media' component={Media}/>
+          <Route path='/calendar' component={Calendar}/>
           <Route path='/kids' component={Kids}/>
           <Route path='/about' component={About}/>
         <Footer />

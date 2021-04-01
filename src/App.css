@@ -1,4 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=sw');
+
 body {
-    background-color: black;
-    background-image: url('./assets/images/orange.jpg');
+    background-color: #E8E8E8;
+}
+
+.navbar-brand {
+    font-family: satisfy;
+}
+
+/* Calendar Settings */
+
+.grid-container {
+    max-width: 750px;
+    margin: auto;
+}
+
+#calendar {
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+    color: indigo;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.weekdays {
+    height: 4rem;
+    padding: 0 0.4rem;
+    display: flex;
+}
+
+.weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+    background-color: #262626;
+    color: white;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+
+/* Carousel settings */
+
+.d-block {
+    opacity: 0.7;
+    position: sticky;
+}
+
+.start-height {
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: satisfy;
+    opacity: 1;
+}
+
+#classical-height {
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: satisfy;
+    opacity: 1;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+    .start-height {
+        line-height: 2rem;
+        font-size: 2rem;
+    }
+
+    #classical-height {
+        line-height: 3rem;
+        font-size: 2rem;
+    }
 }
