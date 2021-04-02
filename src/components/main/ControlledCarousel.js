@@ -9,9 +9,9 @@ const ControlledCarousel = () => {
   
     return (
       <Carousel>
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={5000}>
           <Carousel.Caption>
-            <h3 className="start-height">Pooja's Bollywood Dance Academy</h3>
+            <h3 className="start-height">Add color to your life</h3>
           </Carousel.Caption>
           <img
             className="d-block w-100"
@@ -19,9 +19,9 @@ const ControlledCarousel = () => {
             alt="First slide"
           />
         </Carousel.Item>
-        <Carousel.Item interval={500}>
+        <Carousel.Item interval={4000}>
           <Carousel.Caption>
-              <h3 className="start-height">Pooja's Bollywood Dance Academy</h3>
+              <h3 className="start-height">Express yourself to the fullest</h3>
           </Carousel.Caption>
           <img
             className="d-block w-100"
@@ -31,7 +31,7 @@ const ControlledCarousel = () => {
         </Carousel.Item>
         <Carousel.Item>
           <Carousel.Caption>
-            <h3 id="classical-height">Pooja's Bollywood Dance Academy</h3>
+            <h3 id="classical-height">Live fearlessly</h3>
           </Carousel.Caption>
           <img
             className="d-block w-100"

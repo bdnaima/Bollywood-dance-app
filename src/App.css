@@ -10,96 +10,48 @@ body {
 
 /* Calendar Settings */
 
-.grid-container {
-    max-width: 750px;
+.calendar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    max-width: 500px;
     margin: auto;
 }
 
-#calendar {
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+.month {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 500px;
+    margin: auto;
 }
 
-.month {
-    color: indigo;
+/* Dance List */
+.list-group {
+    max-width: 750px;
+    margin: auto;
+    margin-top: 3rem;
+} 
+
+.list-group-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.weekdays {
-    height: 4rem;
-    padding: 0 0.4rem;
-    display: flex;
+.btn-primary {
+    background-color: indigo;
+    border: 2px solid indigo;
 }
 
-.weekdays div {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    width: calc(44.2rem/7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-.days {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.2rem;
-}
-
-.days div {
-    font-size: 1.4rem;
-    margin: 0.3rem;
-    width: calc(40.2rem / 7);
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s;
-}
-
-.days div:hover:not(.today) {
-    background-color: #262626;
-    color: white;
-    border: 0.2rem solid #777;
-    cursor: pointer;
-}
-
-.prev-date,
-.next-date {
-  opacity: 0.5;
-}
-
-
-/* Carousel settings */
-
-.d-block {
-    opacity: 0.7;
-    position: sticky;
-}
-
-.start-height {
-    font-weight: bold;
-    font-size: 4rem;
-    font-family: satisfy;
-    opacity: 1;
-}
-
-#classical-height {
-    font-weight: bold;
-    font-size: 4rem;
-    font-family: satisfy;
-    opacity: 1;
+.btn-primary:hover {
+    background-color: darkorchid;
+    border: 2px solid darkorchid;
 }
 
 /* Media queries */
 @media (max-width: 1024px) {
+    .grid-container {
+        max-width: 900px;
+    }
+
     .start-height {
         line-height: 2rem;
         font-size: 2rem;

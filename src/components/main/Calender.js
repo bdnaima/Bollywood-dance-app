@@ -1,50 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Button } from 'react-bootstrap';
+import DanceList from './DanceList';
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const date = new Date();
 
 const Calendar = () => {
-    const [days, setDays] = useState([]);
-    const date = new Date();
-    const numOfDays = 31;
-    const month = date.getMonth();
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const [firstDate, setFirstDate] = useState(new Date(date.getFullYear(), date.getMonth(), 1));
 
-    const handlePrevClick = () => {
-        
-        setDays(date.getMonth() - 1)
+    const weekDay = firstDate.getDay();
 
-        console.log(days);
-    }
+    (console.log(weekDay))
 
-    const handleNextClick = () => {
-        setDays(date.getMonth() + 1)
+    const lastDate = useMemo(() => {
+        return new Date(firstDate.getFullYear(), firstDate.getMonth() + 1, 0)
+    }, [firstDate])
 
-        console.log(days);
-    }
+    const handlePrevClick = useCallback(() => {
+        const prevDate = new Date(firstDate.getFullYear(), firstDate.getMonth() - 1, 1);
+        setFirstDate(prevDate);
+    }, [firstDate])
+
+    const handleNextClick = useCallback(() => {
+        const nextDate = new Date(firstDate.getFullYear(), firstDate.getMonth() + 1, 1);
+        setFirstDate(nextDate);
+    }, [firstDate])
     
     return (
       <>
-                 <div className="month">
-                <button onClick={handlePrevClick}>Prev</button>
-                <div className="date">
-                    <h1>{months[month]}</h1>
-                </div>
-                <button onClick={handleNextClick}>Next</button>
+        <div className="month">
+            <Button style={{background: "transparent", border: "transparent"}} onClick={handlePrevClick}><FaChevronLeft style={{color: "indigo"}} /></Button>           
+            <div>
+                <h1>{months[firstDate.getMonth()]} {firstDate.getFullYear()}</h1>
             </div>
-        <div id="calendar" className="grid-container">
-            <div className="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div> 
-            <div className="days">
-                {[...Array(numOfDays)].map((a, i) => (
-                    <div key={i}>{i + 1}</div>
-                ))}
-            </div>
+            <Button style={{background: "transparent", border: "transparent"}} onClick={handleNextClick}><FaChevronRight style={{color: "indigo"}} /></Button>
         </div>
+        <div className="calendar">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+            {[...Array(weekDay)].map(() => (
+                <div></div>
+            ))}
+            
+            {[...Array(lastDate.getDate())].map((a, i) => (
+                <div key={i}>{i + 1}</div>
+            ))}
+        </div>
+
+        <DanceList />
       </>
       
     );

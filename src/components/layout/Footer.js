@@ -7,7 +7,7 @@ const StyledFooter = styled.div `
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-  background-size: cover;
+    background-size: cover;
     margin-top: 10em;
     height: 25rem;
     opacity: 0.5;
