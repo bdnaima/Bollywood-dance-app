@@ -51,7 +51,7 @@ const Calendar = () => {
             ))}
             
             {[...Array(lastDate.getDate())].map((a, i) => (
-                <div key={i}>{i + 1}</div>
+                <div class="days" key={i}>{i + 1}</div>
             ))}
         </div>
 
