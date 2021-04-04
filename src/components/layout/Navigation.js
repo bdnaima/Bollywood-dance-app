@@ -6,14 +6,12 @@ const Navigation = () => {
     <>
       <ReactBootStrap.Navbar 
         collapseOnSelect expand="lg" 
-        bg="dark" 
         variant="dark"
         sticky="top">
         <ReactBootStrap.Navbar.Brand href="/">Pooja's Bollywood Dance Academy</ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
           <ReactBootStrap.Nav className="mr-auto">
-            <ReactBootStrap.Nav.Link href="/">Home</ReactBootStrap.Nav.Link>
             <ReactBootStrap.Nav.Link href="/classes">Classes</ReactBootStrap.Nav.Link>
             <ReactBootStrap.Nav.Link href="/calendar">Schedule</ReactBootStrap.Nav.Link>
             <ReactBootStrap.NavDropdown title="Dropdown" id="collasible-nav-dropdown">

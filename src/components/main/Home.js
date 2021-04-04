@@ -1,17 +1,21 @@
 import React from 'react'
-import { CardGroup, Card } from 'react-bootstrap';
+import { CardGroup, Card, Jumbotron, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
-import kids from '../../assets/images/kids.jpg';
+import kids from '../../assets/images/kids.jpeg';
 import media from '../../assets/images/media.jpg';
 import yoga from '../../assets/images/yoga.jpg';
+import bhangra from '../../assets/images/bhangra.jpeg';
 
 const StyledCard = styled(Card)`
   max-width: 18rem;
   margin: 0.5rem;
-  opacity: 0.8;
+  transition: 0.5s;
+  background-color: #32174d;
+  color: white;
 
   &:hover {
         opacity: 0.5;
@@ -27,7 +31,17 @@ const Home = () => {
   return (
     <>
       <ControlledCarousel />
-
+      <Jumbotron fluid>
+        <Container>
+          <h1>For the love of dance!</h1>
+          <p>
+            Find classes and book anytime.
+          </p>
+          <Link to="/signup">
+            <p class="signup-look">Sign up here</p>
+          </Link>
+        </Container>
+      </Jumbotron>
       {/*Card section */}
       <div>
         <StyledCardGroup>
@@ -35,10 +49,6 @@ const Home = () => {
             <Card.Img variant="top" src={ anoli } />
             <Card.Body>
               <Card.Title>Dance Classes</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-              </Card.Text>
             </Card.Body>
           </StyledCard>
 
@@ -46,21 +56,12 @@ const Home = () => {
             <Card.Img variant="top" src={ party } />
             <Card.Body>
               <Card.Title>Events</Card.Title>
-              <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-                content.{' '}
-              </Card.Text>
             </Card.Body>
           </StyledCard>
           <StyledCard>
             <Card.Img variant="top" src={ kids }/>
             <Card.Body>
               <Card.Title>Kids Bollywood</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.
-              </Card.Text>
             </Card.Body>
           </StyledCard>
         </StyledCardGroup>
@@ -71,30 +72,18 @@ const Home = () => {
             <Card.Img variant="top" src={ media } />
             <Card.Body>
               <Card.Title>Media</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-              </Card.Text>
             </Card.Body>
           </StyledCard>
           <StyledCard>
             <Card.Img variant="top" src={ yoga }/>
             <Card.Body>
               <Card.Title>Yoga</Card.Title>
-              <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-                content.{' '}
-              </Card.Text>
             </Card.Body>
           </StyledCard>
           <StyledCard>
-            <Card.Img variant="top" src={ yoga }/>
+            <Card.Img variant="top" src={ bhangra }/>
             <Card.Body>
               <Card.Title>About</Card.Title>
-              <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-                content.{' '}
-              </Card.Text>
             </Card.Body>
           </StyledCard>
         </StyledCardGroup>

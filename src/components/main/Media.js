@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import videoplayback from '../../assets/images/videoplayback.mp4'
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
-import kids from '../../assets/images/kids.jpg';
+import kids from '../../assets/images/kids.jpeg';
 
 const StyledCard = styled(Card)`
   max-width: 18em;

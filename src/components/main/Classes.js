@@ -3,7 +3,7 @@ import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
-import kids from '../../assets/images/kids.jpg';
+import kids from '../../assets/images/kids.jpeg';
 
 const StyledCard = styled(Card)`
   max-width: 18em;
