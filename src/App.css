@@ -5,13 +5,16 @@ body {
     /* background-image: url("./assets/images/orange.jpg"); */
 }
 
-.navbar {
-    background-color: rebeccapurple;
+.navbar a {
     color: white;
 }
 
 .navbar-brand {
     font-family: satisfy;
+}
+
+.dropdown-link {
+    color: black;
 }
 
 .jumbotron-fluid {
@@ -79,6 +82,8 @@ body {
     justify-content: space-between;
 }
 
+/* Button settings */
+
 .btn-primary {
     background-color: indigo;
     border: 2px solid indigo;
@@ -87,6 +92,27 @@ body {
 .btn-primary:hover {
     background-color: darkorchid;
     border: 2px solid darkorchid;
+}
+
+.w-100 {
+    margin-top: 1rem;
+    background-color:rgb(0,128,128);
+    border: 2px solid rgb(0,128,128);
+}
+
+.w-100:hover {
+    background-color: rgb(32,178,170);
+    border: 2px solid rgb(0,128,128);
+}
+
+.w-100 a {
+    color: white;
+    text-decoration: none;
+}
+
+.logging-in {
+    text-align: center;
+    margin-top: 2em;
 }
 
 /* Footer section */

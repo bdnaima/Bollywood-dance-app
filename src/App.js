@@ -1,28 +1,39 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Route} from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
 import Navigation from './components/layout/Navigation';
 import Home from './components/main/Home';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
 import Classes from './components/main/Classes';
 import Media from './components/main/Media'
 import Kids from './components/main/Kids';
 import About from './components/main/About';
 import Calendar from './components/main/Calender';
 import Footer from './components/layout/Footer';
+import UserProfile from './components/main/UserProfile';
 
 const App = () => {
+
   return (
     <BrowserRouter>
-      <div>
-        <Navigation />
-          <Route exact path='/' component={Home}/>
-          <Route path='/classes' component={Classes}/>
-          <Route path='/media' component={Media}/>
-          <Route path='/calendar' component={Calendar}/>
-          <Route path='/kids' component={Kids}/>
-          <Route path='/about' component={About}/>
-        <Footer />
-      </div>
+      <AuthProvider>
+        <div>
+          <Navigation />
+            <Route exact path='/' component={ Home }/>
+            <Route path='/signin' component={ SignIn }/>
+            <Route path='/signup' component={ SignUp }/>
+            <Route path='/userprofile' component={ UserProfile } />
+            <Route path='/classes' component={ Classes }/>
+            <Route path='/media' component={ Media }/>
+            <Route path='/calendar' component={ Calendar }/>
+            <Route path='/kids' component={ Kids }/>
+            <Route path='/about' component={ About }/>
+          <Footer />
+        </div>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

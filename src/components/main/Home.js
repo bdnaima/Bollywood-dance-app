@@ -38,7 +38,7 @@ const Home = () => {
             Find classes and book anytime.
           </p>
           <Link to="/signup">
-            <p class="signup-look">Sign up here</p>
+            <p className="signup-look">Sign up here</p>
           </Link>
         </Container>
       </Jumbotron>
