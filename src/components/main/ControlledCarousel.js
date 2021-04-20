@@ -10,7 +10,7 @@ const ControlledCarousel = () => {
       <Carousel>
         <Carousel.Item interval={5000}>
           <Carousel.Caption>
-            <h3 className="start-height">Add color to your life</h3>
+            <h3>Add color to your life</h3>
           </Carousel.Caption>
           <img
             className="d-block w-100"
@@ -20,7 +20,7 @@ const ControlledCarousel = () => {
         </Carousel.Item>
         <Carousel.Item interval={4000}>
           <Carousel.Caption>
-              <h3 className="start-height">Express yourself to the fullest</h3>
+              <h3>Express yourself to the fullest</h3>
           </Carousel.Caption>
           <img
             className="d-block w-100"

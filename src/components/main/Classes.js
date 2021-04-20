@@ -10,7 +10,6 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardGroup = styled(CardGroup)`
-  background-color: lightgray;
   margin-top: 5em;
   justify-content: space-around;
 `;

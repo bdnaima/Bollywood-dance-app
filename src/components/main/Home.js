@@ -14,7 +14,8 @@ const StyledCard = styled(Card)`
   max-width: 18rem;
   margin: 0.5rem;
   transition: 0.5s;
-  background-color: #32174d;
+  background-color: rgb(32,178,170);
+  box-shadow: 1px 2px 3px 6px rgb(0,128,128);
   color: white;
 
   &:hover {

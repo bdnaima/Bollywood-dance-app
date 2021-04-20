@@ -66,15 +66,14 @@ const SignUp = () => {
                         placeholder="Password" />
                 </Form.Group>
                 <Button 
-                    id="btn-signup"
-                    className="w-100" 
+                    className="w-100 btn-signup" 
                     type="submit"
                     style={{boxShadow:" 1px 1px 2px 1px black"}}>
                 Create profile
                 </Button>    
                 <p className="logging-in">Or</p>
                 <div>
-                    <Button className="w-100"><Link to="/signin">Sign In</Link></Button>
+                    <Button className="w-100 btn-signup"><Link to="/signin">Sign In</Link></Button>
                 </div>           
             </StyledForm>
         </div>

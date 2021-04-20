@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import firebase from '../../firebase/firebaseIndex'
+import { auth } from '../../firebase/firebaseIndex'
 
 const StyledForm = styled.form`
     background-color: #66CDAA;
@@ -21,7 +21,7 @@ const SignIn = () => {
         const email = emailRef.current.value
         const password = passwordRef.current.value
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(email, password)
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -58,14 +58,14 @@ const SignIn = () => {
                         placeholder="Password" />
                 </Form.Group>
                 <Button 
-                    className="w-100" 
+                    className="w-100 btn-signup" 
                     type="submit"
                     style={{boxShadow:" 1px 1px 2px 1px black"}}>
                 Sign in
                 </Button>    
                 <p className="logging-in">Or</p>
                 <div>
-                    <Button className="w-100"><Link to="/signup">Create new profile</Link></Button>
+                    <Button className="w-100 btn-signup"><Link to="/signup">Create new profile</Link></Button>
                 </div>           
             </StyledForm>
         </div>
