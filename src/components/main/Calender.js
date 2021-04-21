@@ -1,17 +1,18 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { db } from '../../firebase/firebaseIndex';
-
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
 import DanceList from './DanceList';
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
-const date = new Date();
+const initialDate = new Date();
 
 const Calendar = () => {
-    const [firstDate, setFirstDate] = useState(new Date(date.getFullYear(), date.getMonth(), 1));
+    const [firstDate, setFirstDate] = useState(new Date(initialDate.getFullYear(), initialDate.getMonth()));
     const [classes, setClasses] = useState([]);
+    const [classesToShow, setClassesToShow] = useState([]);
 
     useEffect(() => {
         const ref = db.collection('classes').onSnapshot(snapshot => {
@@ -35,14 +36,24 @@ const Calendar = () => {
     }, [firstDate])
 
     const handlePrevClick = useCallback(() => {
-        const prevDate = new Date(firstDate.getFullYear(), firstDate.getMonth() - 1, 1);
+        const prevDate = new Date(firstDate.getFullYear(), firstDate.getMonth() - 1);
         setFirstDate(prevDate);
     }, [firstDate])
 
     const handleNextClick = useCallback(() => {
-        const nextDate = new Date(firstDate.getFullYear(), firstDate.getMonth() + 1, 1);
+        const nextDate = new Date(firstDate.getFullYear(), firstDate.getMonth() + 1);
         setFirstDate(nextDate);
     }, [firstDate])
+
+    const handleClick = useCallback((e) => {
+        const day = e.target.dataset.day;
+        const year = firstDate.getFullYear();
+        const month = firstDate.getMonth();
+        const date = new Date(year, month, day);
+        const weekday = weekdays[date.getDay()];
+        
+        setClassesToShow(classes.filter(cls => cls[weekday]))
+    }, [firstDate, classes])
     
     return (
       <>
@@ -67,11 +78,11 @@ const Calendar = () => {
             ))}
             
             {[...Array(lastDate.getDate())].map((a, i) => (
-                <div className="days" key={i + 7}>{i + 1}</div>
+                <div className="days" data-day={i + 1} onClick={handleClick} key={i + 7}>{i + 1}</div>
             ))}
         </div>
         <div>
-            {classes && <DanceList classes={classes} />}
+            <DanceList classes={classesToShow} />
         </div>
       </>
       
