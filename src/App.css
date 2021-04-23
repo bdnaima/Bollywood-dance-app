@@ -36,6 +36,34 @@ body {
     color: white;
 }
 
+.success-msg {
+    background-color:rgb(73, 136, 73);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+}
+
+/* Form settings */
+
+.container {
+    max-width: 600px;
+    margin-top: 2rem;
+    padding: 0 3rem 0 3rem;
+    border: 2px solid purple;
+    background-color: white;
+}
+
+.check-weekdays {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-check-label {
+    font-weight: bold;
+}
+
 /* Calendar Settings */
 
 .calendar {
@@ -84,7 +112,8 @@ body {
 .list-group {
     max-width: 750px;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 } 
 
 .list-group-item {
@@ -156,6 +185,11 @@ body {
 
 /* Media queries */
 @media (max-width: 1024px) {
+    .check-weekdays {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
     #footer-info {
         flex-direction: column;
         padding-top: 0;

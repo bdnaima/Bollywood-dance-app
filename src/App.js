@@ -14,6 +14,7 @@ import About from './components/main/About';
 import Calendar from './components/main/Calender';
 import Footer from './components/layout/Footer';
 import UserProfile from './components/main/UserProfile';
+import Admin from './components/main/Admin';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
             <Route path='/calendar' component={ Calendar }/>
             <Route path='/kids' component={ Kids }/>
             <Route path='/about' component={ About }/>
+            <Route exact path='/admin' component={ Admin }/>
           <Footer />
         </div>
       </AuthProvider>
