@@ -5,8 +5,6 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Navigation from './components/layout/Navigation';
 import Home from './components/main/Home';
-import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp';
 import Classes from './components/main/Classes';
 import Media from './components/main/Media'
 import Kids from './components/main/Kids';
@@ -24,8 +22,6 @@ const App = () => {
         <div>
           <Navigation />
             <Route exact path='/' component={ Home }/>
-            <Route path='/signin' component={ SignIn }/>
-            <Route path='/signup' component={ SignUp }/>
             <Route path='/userprofile' component={ UserProfile } />
             <Route path='/classes' component={ Classes }/>
             <Route path='/media' component={ Media }/>

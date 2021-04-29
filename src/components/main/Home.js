@@ -1,6 +1,5 @@
 import React from 'react'
-import { CardGroup, Card, Jumbotron, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { CardGroup, Card, Jumbotron, Container,} from 'react-bootstrap';
 import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
 import anoli from '../../assets/images/anoli.jpg';
@@ -14,8 +13,8 @@ const StyledCard = styled(Card)`
   max-width: 18rem;
   margin: 0.5rem;
   transition: 0.5s;
-  background-color: rgb(32,178,170);
-  box-shadow: 1px 2px 3px 6px rgb(0,128,128);
+  background-color: rebeccapurple;
+  box-shadow: 2px 3px 3px 3px indigo;
   color: white;
 
   &:hover {
@@ -26,6 +25,7 @@ const StyledCard = styled(Card)`
 const StyledCardGroup = styled(CardGroup)`
   margin: 2rem;
   justify-content: space-around;
+  border-radius: 20px;
 `;
 
 const Home = () => {
@@ -38,9 +38,6 @@ const Home = () => {
           <p>
             Find classes and book anytime.
           </p>
-          <Link to="/signup">
-            <p className="signup-look">Sign up here</p>
-          </Link>
         </Container>
       </Jumbotron>
       {/*Card section */}

@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=sw');
 
 body {
+    /* background-color: #FFFAFA */
     background-image: url("./assets/images/purple.jpg");
-}
-
-.navbar a {
-    color: white;
 }
 
 .navbar-brand {
     font-family: satisfy;
 }
 
+.nav-link {
+    color: white;
+}
+
+.bg-dark {
+    background-color: rebeccapurple!important;
+}
+
 .dropdown-link {
     color: black;
 }
 
+.dropdown-item a {
+    background-color: rebeccapurple;
+}
+
+#anchor-white {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
 .d-block {
     opacity: 0.8;
 }
@@ -36,20 +50,15 @@ body {
     color: white;
 }
 
-.success-msg {
-    background-color:rgb(73, 136, 73);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.card-img-top {
     border-radius: 20px;
-    color: white;
-    padding: 10px;
 }
 
 /* Form settings */
 
-.container {
+.admin-container {
     max-width: 600px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0 3rem 0 3rem;
     border: 2px solid purple;
     background-color: white;
@@ -73,8 +82,8 @@ body {
     padding: 10px;
     max-width: 800px;
     margin: auto;
-    background-color: rgb(0,128,128);
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .calendar > div {
@@ -89,7 +98,7 @@ body {
     margin: auto;
     margin-top: 2rem;
     padding: 2em;
-    background-color: #66CDAA;
+    background-color: rebeccapurple;
     color: whitesmoke;
 }
 
@@ -113,7 +122,7 @@ body {
     max-width: 750px;
     margin: auto;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 } 
 
 .list-group-item {
@@ -131,17 +140,6 @@ body {
 .btn-primary:hover {
     background-color: darkorchid;
     border: 2px solid darkorchid;
-}
-
-.btn-signup {
-    margin-top: 1rem;
-    background-color:rgb(0,128,128);
-    border: 2px solid rgb(0,128,128);
-}
-
-.btn-signup:hover {
-    background-color: rgb(32,178,170);
-    border: 2px solid rgb(0,128,128);
 }
 
 .btn-signup a {
@@ -168,6 +166,7 @@ body {
 
 .footer-contact a {
     color: white;
+    text-decoration: none;
 }
 
 .footer-icon {
@@ -190,8 +189,14 @@ body {
         flex-direction: column;
         margin-left: 0;
     }
+
+    #anchor-white {
+        margin-left: 0;
+    }
+    
     #footer-info {
         flex-direction: column;
+        align-items: center;
         padding-top: 0;
     }
 
@@ -207,8 +212,12 @@ body {
     }
 
     .circle {
-       margin: 1em;
+       margin: 1rem 0 2rem 0;
        width: 50px;
        height: 50px;
+    }
+
+    .ibSwJq {
+        height: 0;
     }
 }
