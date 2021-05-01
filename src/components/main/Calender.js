@@ -13,6 +13,7 @@ const Calendar = () => {
     const [firstDate, setFirstDate] = useState(new Date(initialDate.getFullYear(), initialDate.getMonth()));
     const [classes, setClasses] = useState([]);
     const [classesToShow, setClassesToShow] = useState([]);
+    const [selectedDate, setSelectedDate] = useState();
 
     useEffect(() => {
         const ref = db.collection('classes').onSnapshot(snapshot => {
@@ -51,6 +52,8 @@ const Calendar = () => {
         const month = firstDate.getMonth();
         const date = new Date(year, month, day);
         const weekday = weekdays[date.getDay()];
+
+        setSelectedDate(date);
         
         setClassesToShow(classes.filter(cls => cls[weekday]))
     }, [firstDate, classes])
@@ -73,16 +76,23 @@ const Calendar = () => {
             <div>Fri</div>
             <div>Sat</div>
 
-            {[...Array(weekDay)].map((a, i) => (
+            {[...Array(weekDay)].map((_, i) => (
                 <div key={i}></div>
             ))}
             
-            {[...Array(lastDate.getDate())].map((a, i) => (
-                <div className="days" data-day={i + 1} onClick={handleClick} key={i + 7}>{i + 1}</div>
+            {[...Array(lastDate.getDate())].map((_, i) => (
+                <div
+                    key={i + 7} 
+                    className="days"
+                    style={{border: selectedDate?.getDate() === i + 1 ? "1px solid indigo" : "none"}}
+                    data-day={i + 1} 
+                    onClick={handleClick}>
+                    {i + 1}
+                </div>
             ))}
         </div>
         <div>
-            <DanceList classes={classesToShow} />
+            <DanceList classes={classesToShow} selectedDate={selectedDate} />
         </div>
       </>
       

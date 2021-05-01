@@ -4,9 +4,7 @@ import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
-import kids from '../../assets/images/kids.jpeg';
 import media from '../../assets/images/media.jpg';
-import yoga from '../../assets/images/yoga.jpg';
 import bhangra from '../../assets/images/bhangra.jpeg';
 
 const StyledCard = styled(Card)`
@@ -56,28 +54,18 @@ const Home = () => {
               <Card.Title>Events</Card.Title>
             </Card.Body>
           </StyledCard>
-          <StyledCard>
-            <Card.Img variant="top" src={ kids }/>
-            <Card.Body>
-              <Card.Title>Kids Bollywood</Card.Title>
-            </Card.Body>
-          </StyledCard>
-        </StyledCardGroup>
 
-        {/* Content's second section */}
-        <StyledCardGroup>
           <StyledCard>
             <Card.Img variant="top" src={ media } />
             <Card.Body>
               <Card.Title>Media</Card.Title>
             </Card.Body>
           </StyledCard>
-          <StyledCard>
-            <Card.Img variant="top" src={ yoga }/>
-            <Card.Body>
-              <Card.Title>Yoga</Card.Title>
-            </Card.Body>
-          </StyledCard>
+        </StyledCardGroup>
+
+        {/* Content's second section */}
+        <StyledCardGroup>
+
           <StyledCard>
             <Card.Img variant="top" src={ bhangra }/>
             <Card.Body>

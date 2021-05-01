@@ -5,7 +5,6 @@ import AdminDanceList from './AdminDanceList';
 
 const Admin = () => {
     const [classes, setClasses] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const ref = db.collection('classes').onSnapshot(snapshot => {
