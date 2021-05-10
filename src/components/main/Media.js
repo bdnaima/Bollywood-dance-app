@@ -1,7 +1,6 @@
 import React from 'react'
 import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
-import videoplayback from '../../assets/images/videoplayback.mp4'
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
 import kids from '../../assets/images/kids.jpeg';
@@ -28,7 +27,7 @@ const Media = () => {
           height: '32vh',
           marginTop: "1rem",
         }}>
-        <source src={videoplayback} type="video/mp4" />
+        <source src="https://firebasestorage.googleapis.com/v0/b/dance-app-9c409.appspot.com/o/videoplayback.mp4?alt=media&token=05f88756-ee1d-4efd-a2e9-218b041a1afd" type="video/mp4" />
       </video>
 
       {/* Card section */}
