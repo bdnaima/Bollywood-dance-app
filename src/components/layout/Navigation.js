@@ -25,9 +25,9 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/calendar">Schedule</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">             
               <NavDropdown.Item as={Link} to="/media">Media</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/news">News</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/gallery">Gallery</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/events">Events</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/contact">Contacts</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/about">About</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

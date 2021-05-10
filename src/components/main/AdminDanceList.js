@@ -95,15 +95,26 @@ const AdminDanceList = ({ classes }) => {
                     </Toast.Header>
                 </Toast>
             </div>
-            <ListGroup>
-                <ListGroup.Item>
+            <ListGroup style={{backgroundColor: "lightgray"}}>
+                <ListGroup.Item
+                    style={{
+                        textAlign: "center",
+                        margin: "2rem 5rem 0 5rem"
+                    }}>
                     <h3>Dance classes</h3>
-                    {userInfo.role === "admin" && <Button onClick={handleModal}>Add</Button>}
+                    {userInfo && userInfo.role === "admin" && <Button onClick={handleModal}>Add</Button>}
                 </ListGroup.Item>
-
-                {classes.map(cls => <CourseCard key={cls.id} cls={cls}>
-                    {userInfo.role === "admin" && <Button onClick={() => handleDelete(cls.id)}><Trash /></Button>}
-                </CourseCard>)}
+                <div 
+                    className="cards-flex"
+                    style={{
+                    display: "flex",
+                    flexFlow: "wrap",
+                    margin: "0 4rem 0 4rem"
+                }}>
+                    {classes.map(cls => <CourseCard key={cls.id} cls={cls}>
+                        {userInfo && userInfo.role === "admin" && <Button onClick={() => handleDelete(cls.id)}><Trash /></Button>}
+                    </CourseCard>)}
+                </div>
             </ListGroup>
             <Modal
                 show={showModal}
@@ -137,7 +148,12 @@ const AdminDanceList = ({ classes }) => {
                             <Form.Control
                                 type="date"
                                 required
-                                onChange={(e) => { setStartDate(e.target.valueAsNumber) }} />
+                                onChange={(e) => {
+                                    const date = e.target.valueAsDate
+                                    date.setHours(0, 0, 0, 0)
+                                    setStartDate(date)
+                                }}    
+                            />
                         </Form.Group>
 
                         <Form.Group>
@@ -145,7 +161,12 @@ const AdminDanceList = ({ classes }) => {
                             <Form.Control
                                 type="date"
                                 required
-                                onChange={(e) => { setEndDate(e.target.valueAsNumber) }} />
+                                onChange={(e) => {
+                                    const date = e.target.valueAsDate
+                                    date.setHours(23, 59, 59, 999)
+                                    setEndDate(date)
+                                }} 
+                            />
                         </Form.Group>
 
                         <Form.Group>

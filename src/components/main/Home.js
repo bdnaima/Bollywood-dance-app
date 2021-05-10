@@ -1,15 +1,21 @@
 import React from 'react'
-import { CardGroup, Card, Jumbotron, Container,} from 'react-bootstrap';
+import { CardGroup, Card, Jumbotron, Container, } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
+import dancer from '../../assets/images/dancer.jpg'
 import anoli from '../../assets/images/anoli.jpg';
 import party from '../../assets/images/party.jpg';
 import media from '../../assets/images/media.jpg';
 import bhangra from '../../assets/images/bhangra.jpeg';
 
+const StyledCardGroup = styled(CardGroup)`
+  margin: 4rem;
+  flex-direction: column;
+`;
+
 const StyledCard = styled(Card)`
   max-width: 18rem;
-  margin: 0.5rem;
   transition: 0.5s;
   background-color: rebeccapurple;
   box-shadow: 2px 3px 3px 3px indigo;
@@ -20,10 +26,9 @@ const StyledCard = styled(Card)`
     }
 `;
 
-const StyledCardGroup = styled(CardGroup)`
-  margin: 2rem;
-  justify-content: space-around;
-  border-radius: 20px;
+const StyledJumbotron = styled(Jumbotron) `
+    background-image: url(${dancer});
+    height: 25rem;
 `;
 
 const Home = () => {
@@ -34,49 +39,84 @@ const Home = () => {
         <Container>
           <h1>For the love of dance!</h1>
           <p>
-            Find classes and book anytime.
+            Find a course and book anytime.
           </p>
         </Container>
       </Jumbotron>
+
       {/*Card section */}
-      <div>
-        <StyledCardGroup>
-          <StyledCard>
-            <Card.Img variant="top" src={ anoli } />
+      <StyledCardGroup>
+        <div className="styling-cards">
+          <StyledCard style={{ alignSelf: "flex-start" }}>
+            <Card.Img variant="top" src={anoli} />
             <Card.Body>
               <Card.Title>Dance Classes</Card.Title>
+              <Link to="/admin" className="stretched-link" />
             </Card.Body>
           </StyledCard>
+          <div className="styling-text">
+            <h1>Find classes</h1>
+            <p>Select a day in the schedule and book anytime.</p>
+          </div>
+        </div>
 
-          <StyledCard>
-            <Card.Img variant="top" src={ party } />
+        <div className="styling-cards flip">
+          <div className="styling-text">
+            <h1>Find events</h1>
+            <p>Check out upcoming events. Book your own events.</p>
+          </div>
+          <StyledCard style={{ alignSelf: "flex-end" }}>
+            <Card.Img variant="top" src={party} />
             <Card.Body>
               <Card.Title>Events</Card.Title>
+              <Link to="/events" className="stretched-link" />
             </Card.Body>
           </StyledCard>
+        </div>
 
+        <div className="styling-cards">
           <StyledCard>
-            <Card.Img variant="top" src={ media } />
+            <Card.Img variant="top" src={media} />
             <Card.Body>
               <Card.Title>Media</Card.Title>
+              <Link to="/media" className="stretched-link" />
             </Card.Body>
           </StyledCard>
-        </StyledCardGroup>
+          <div className="styling-text">
+            <h1>Check out media</h1>
+            <p>Watch videos of all the interesting dance shows.</p>
+          </div>
+        </div>
 
-        {/* Content's second section */}
-        <StyledCardGroup>
-
-          <StyledCard>
-            <Card.Img variant="top" src={ bhangra }/>
+        <div className="styling-cards flip">
+          <div className="styling-text">
+            <h1>Gallery</h1>
+            <p>Check out our gallery containing colorful pictures.</p>
+          </div>
+          <StyledCard style={{ alignSelf: "flex-end" }}>
+            <Card.Img variant="top" src={bhangra} />
             <Card.Body>
-              <Card.Title>About</Card.Title>
+              <Card.Title>Gallery</Card.Title>
+              <Link to="/gallery" className="stretched-link" />
             </Card.Body>
           </StyledCard>
-        </StyledCardGroup>
-      </div>
+        </div>
+      </StyledCardGroup>'
+
+      <StyledJumbotron fluid>
+        <Container>
+          <Link to="/about"  
+                style={{
+                  fontSize: "3rem", 
+                  color: "white", 
+                  textDecoration: "none"
+                }} 
+                >About</Link>
+        </Container>
+      </StyledJumbotron>
     </>
-    
+
   );
 }
-  
+
 export default Home;

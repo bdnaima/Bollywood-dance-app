@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase/firebaseIndex';
-import { Container } from 'react-bootstrap';
 import AdminDanceList from './AdminDanceList';
 
 const Admin = () => {
@@ -23,11 +22,7 @@ const Admin = () => {
 
     return (
         <>
-        <Container className="admin-container">
-            <div>
-                <AdminDanceList classes={classes}/>
-            </div>
-        </Container>
+            <AdminDanceList classes={classes}/>
         </>
     )
 }

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=sw');
 
 body {
-    /* background-color: #FFFAFA */
-    background-image: url("./assets/images/purple.jpg");
+    background-color: #FFFAFA;
+    /* background-image: url("./assets/images/purple.jpg");
+    background-repeat: no-repeat; */
 }
 
 .navbar-brand {
@@ -30,9 +31,6 @@ body {
     text-decoration: none;
     margin-left: 1rem;
 }
-.d-block {
-    opacity: 0.8;
-}
 
 .jumbotron-fluid {
     background: rebeccapurple;
@@ -42,16 +40,26 @@ body {
     opacity: 0.8;
 }
 
+.jumbotron-style {
+    background-color: lightgray;
+    opacity: 1;
+}
+
+.styling-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.styling-text {
+    align-self: center;
+}
+
 .signup-look {
     color: black;
 }
 
 .signup-look:hover {
     color: white;
-}
-
-.card-img-top {
-    border-radius: 20px;
 }
 
 /* Form settings */
@@ -112,14 +120,6 @@ body {
     cursor: pointer;
 }
 
-/* Dance List */
-.list-group {
-    max-width: 750px;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-
 /* Button settings */
 
 .btn-primary {
@@ -173,10 +173,33 @@ body {
 }
 
 /* Media queries **/ 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+
+    .navbar-text {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
 
     #anchor-white {
         margin-left: 0;
+    }
+
+    .cards-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .styling-cards {
+        flex-wrap: wrap;
+    }
+
+    .styling-text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .flip {
+        flex-wrap: wrap-reverse;
     }
     
     #footer-info {

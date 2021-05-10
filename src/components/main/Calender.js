@@ -52,10 +52,17 @@ const Calendar = () => {
         const month = firstDate.getMonth();
         const date = new Date(year, month, day);
         const weekday = weekdays[date.getDay()];
-
+        
+        //console.log(date.valueOf(), date.getTime())
         setSelectedDate(date);
         
-        setClassesToShow(classes.filter(cls => cls[weekday]))
+        setClassesToShow(classes.filter(cls => {
+            if (cls[weekday] && date >= cls.startDate.toDate() && date <= cls.endDate.toDate()) {
+                return true;
+            } else {
+                return false;
+            }
+        }))
     }, [firstDate, classes])
     
     return (

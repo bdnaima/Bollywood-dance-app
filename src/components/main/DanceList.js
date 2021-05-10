@@ -32,7 +32,7 @@ const DanceList = ({ classes, selectedDate }) => {
         setShowModal(false);
     }
 
-    const BookButton = ({cls}) => {
+    const BookButton = ({ cls }) => {
         if (userInfo.role === 'admin') return null
         if (user) return (
             <Button
@@ -47,17 +47,29 @@ const DanceList = ({ classes, selectedDate }) => {
     return selectedDate ? (
         <>
             <ListGroup>
-                <ListGroup.Item>
+                <ListGroup.Item 
+                    style={{
+                        textAlign: "center",
+                        margin:"2rem 5rem 0 5rem"
+                    }}>
                     {selectedDate.toDateString()}
                 </ListGroup.Item>
-                {classes.length === 0 ? <ListGroup.Item variant="light">
-                    Sorry, no classes available
-                </ListGroup.Item> : null}
-                {classes.map(cls => (
-                    <CourseCard key={cls.id} cls={cls}>
-                        <BookButton cls={cls} />
-                    </CourseCard>)
-                )}
+                <div
+                    className="cards-flex" 
+                    style={{
+                        display: "flex",
+                        margin:"0 4rem 0 4rem"
+                    }}>
+                    {classes.length === 0 ? <ListGroup.Item variant="light">
+                        Sorry, no classes available
+                    </ListGroup.Item> : null}
+                    {classes.map(cls => (
+                        <CourseCard key={cls.id} cls={cls}>
+                            <BookButton cls={cls} />
+                        </CourseCard>
+                    )
+                    )}
+                </div>
             </ListGroup>
 
             <Modal
