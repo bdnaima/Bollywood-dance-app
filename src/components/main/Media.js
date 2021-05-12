@@ -1,47 +1,62 @@
-import React from 'react'
+import React from 'react';
 import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
-import anoli from '../../assets/images/anoli.jpg';
-import party from '../../assets/images/party.jpg';
-import kids from '../../assets/images/kids.jpeg';
-
-const StyledCard = styled(Card)`
-  max-width: 18em;
-`;
+import YoutubeEmbed from "./YoutubeEmbed";
+import danceVideo from '../../assets/images/videoplayback.mp4'
 
 const StyledCardGroup = styled(CardGroup)`
-  margin-top: 5em;
-  justify-content: space-around;
+  margin-left: 2rem;
+`;
+
+const StyledCard = styled(Card)`
+  min-width: 18rem;
+  margin: 4rem;
+
+  @media (max-width: 768px) {
+    margin: 1rem;
+  }
 `;
 
 const Media = () => {
   return (
     <>
       <video
-        id="video"
         autoPlay
         loop
         muted
         style={{
           width: '100%',
-          height: '32vh',
-          marginTop: "1rem",
-        }}>
-        <source src="https://firebasestorage.googleapis.com/v0/b/dance-app-9c409.appspot.com/o/videoplayback.mp4?alt=media&token=05f88756-ee1d-4efd-a2e9-218b041a1afd" type="video/mp4" />
+          height: '20rem',
+          marginTop: "2rem"
+        }}
+      >
+        <source src={danceVideo} type="video/mp4" />
       </video>
 
       {/* Card section */}
       <StyledCardGroup>
-        <StyledCard>
-          <Card.Img variant="top" src={anoli} />
+        <StyledCard class="styledCard-margin" style={{ marginLeft: "0.2rem" }}>
+          <YoutubeEmbed embedId="3KHy-tSOVRA" />
         </StyledCard>
 
         <StyledCard>
-          <Card.Img variant="top" src={party} />
+          <YoutubeEmbed embedId="Oc2UPtPgfQ8" />
         </StyledCard>
 
         <StyledCard>
-          <Card.Img variant="top" src={kids} />
+          <YoutubeEmbed embedId="BpqgFyEdFMs" />
+        </StyledCard>
+
+        <StyledCard>
+          <YoutubeEmbed embedId="tWuWTWwkMEo" />
+        </StyledCard>
+
+        <StyledCard>
+          <YoutubeEmbed embedId="tUAbzwLN5ro" />
+        </StyledCard>
+
+        <StyledCard>
+          <YoutubeEmbed embedId="5cRHt3AaUuU" />
         </StyledCard>
       </StyledCardGroup>
     </>

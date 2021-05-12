@@ -12,10 +12,9 @@ const About = () => {
   
   return (
     <>
-      <StyledJumbotron>
-      </StyledJumbotron>
+      <StyledJumbotron />
       <Container>
-        <h1>Pooja and her Bollywood Academy.</h1>
+        <h1>Pooja and her Bollywood Dance Academy.</h1>
 
         <p> Pooja's Bollywood Dance Academy has existed since 2009 and is situated in Malmö. The academy offers many different dance courses for all age groups. The students consist of a mixed group with different levels of ambitions, from beginners to professionals.  To learn more about the classes, click here. </p>
 

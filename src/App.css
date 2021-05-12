@@ -2,8 +2,7 @@
 
 body {
     background-color: #FFFAFA;
-    /* background-image: url("./assets/images/purple.jpg");
-    background-repeat: no-repeat; */
+    /* background-image: url("./assets/images/purple.jpg"); */
 }
 
 .navbar-brand {
@@ -101,7 +100,8 @@ body {
     margin: auto;
     margin-top: 2rem;
     padding: 2em;
-    background-color: #a9a9a9;
+    /* background-image: url("./assets/images/purple.jpg"); */
+    background-color:gray;
     color: whitesmoke;
 }
 
@@ -141,12 +141,27 @@ body {
     text-align: center;
     margin-top: 2em;
 }
+/* YouTube uploads */
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 
 /* Footer section */
 #footer-info {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 
 .footer-contact {
@@ -223,5 +238,9 @@ body {
        margin: 1rem 0 2rem 0;
        width: 50px;
        height: 50px;
+    }
+
+    .styledCard-margin {
+        margin-left: 0;
     }
 }

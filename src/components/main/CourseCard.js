@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListGroup, Card, } from 'react-bootstrap';
 import styled from 'styled-components';
+import { useAuthContext } from '../../contexts/AuthContext';
 
 const StyledCard = styled(Card)`
   max-width: 18rem;
@@ -13,6 +14,7 @@ const Span = styled.span`
 `;
 
 const CourseCard = ({ cls, children }) => {
+  const { userInfo } = useAuthContext();
   return (
     <StyledCard style={{ width: '18rem' }}>
       <ListGroup.Item>
@@ -25,7 +27,7 @@ const CourseCard = ({ cls, children }) => {
         <ListGroup.Item><Span>Start: </Span>{cls.startDate.toDate().toLocaleDateString()}</ListGroup.Item>
         <ListGroup.Item><Span>End: </Span>{cls.endDate.toDate().toLocaleDateString()}</ListGroup.Item>
         <ListGroup.Item><Span>Enrolled: </Span> {cls.students.length} of {cls.maxStudents} students</ListGroup.Item>
-        <ListGroup.Item><Span>Students: </Span>{cls.students?.join()}</ListGroup.Item>
+        {userInfo && userInfo.role === "admin" && <ListGroup.Item><Span>Students: </Span><span style={{color: "green"}}>{cls.students?.join()}</span></ListGroup.Item>}
         {children}
       </ListGroup.Item>
     </StyledCard>)

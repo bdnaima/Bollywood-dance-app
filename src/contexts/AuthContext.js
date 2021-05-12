@@ -59,6 +59,7 @@ export const AuthProvider = ({ children }) => {
         setShowSignupModal(false);
       })
       .catch((error) => {
+        // TODO: 
         const errorCode = error.code;
         const errorMessage = error.message;
         console.error(errorCode, errorMessage)
@@ -87,7 +88,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    auth.onAuthStateChanged(async user => {
+    return auth.onAuthStateChanged(async user => {
       if (!user) {
         setUser(null);
         setUserInfo(null);
@@ -102,8 +103,8 @@ export const AuthProvider = ({ children }) => {
         auth.signOut();
       }
     });
-  });
-
+  }, []);
+  
   return (
     <>
       <AuthContext.Provider value={{user, userInfo, signin: handleSigninModal, signout: handleSignout}}>{children}</AuthContext.Provider>

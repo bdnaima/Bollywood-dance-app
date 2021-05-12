@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { ListGroup, Button, Modal, Form } from 'react-bootstrap';
+import { ListGroup, Button, Modal, Form, Toast } from 'react-bootstrap';
 import { db, FieldValue } from '../../firebase/firebaseIndex';
 import { useAuthContext } from '../../contexts/AuthContext';
 import CourseCard from './CourseCard';
 
 const DanceList = ({ classes, selectedDate }) => {
     const [showModal, setShowModal] = useState(false);
+    const [showToast, setShowToast] = useState(false);
     const [selectedClass, setSelectedClass] = useState({});
     const { user, userInfo, signin } = useAuthContext();
 
@@ -29,11 +30,12 @@ const DanceList = ({ classes, selectedDate }) => {
             .catch(error => {
                 alert((error.message))
             });
+        setShowToast(true)
         setShowModal(false);
     }
 
     const BookButton = ({ cls }) => {
-        if (userInfo.role === 'admin') return null
+        if (userInfo && userInfo.role === 'admin') return null
         if (user) return (
             <Button
                 onClick={() => handleModal(cls)}
@@ -44,21 +46,32 @@ const DanceList = ({ classes, selectedDate }) => {
         )
     }
 
+    const toggleShowToast = () => setShowToast(!showToast);
+
     return selectedDate ? (
         <>
+            <Toast
+                show={showToast}
+                onClose={toggleShowToast}
+                style={{marginTop: "2rem"}}
+               >
+                <Toast.Header style={{ backgroundColor: "green", color: "white"}}>
+                    <strong className="mr-auto">Booking complete!</strong>
+                </Toast.Header>
+            </Toast>
             <ListGroup>
-                <ListGroup.Item 
+                <ListGroup.Item
                     style={{
                         textAlign: "center",
-                        margin:"2rem 5rem 0 5rem"
+                        margin: "2rem 5rem 0 5rem"
                     }}>
                     {selectedDate.toDateString()}
                 </ListGroup.Item>
                 <div
-                    className="cards-flex" 
+                    className="cards-flex"
                     style={{
                         display: "flex",
-                        margin:"0 4rem 0 4rem"
+                        margin: "0 4rem 0 4rem"
                     }}>
                     {classes.length === 0 ? <ListGroup.Item variant="light">
                         Sorry, no classes available

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ListGroup, Button, Modal, Form, Toast } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
+import  background from '../../assets/images/purple.jpg';
 
 import { db } from '../../firebase/firebaseIndex';
 import CourseCard from './CourseCard';
@@ -72,45 +73,31 @@ const AdminDanceList = ({ classes }) => {
     const valid = validWeekday
     return (
         <>
-            <div
-                aria-live="polite"
-                aria-atomic="true"
-                style={{
-                    position: 'relative',
-                    minHeight: '20px',
-                }}>
-                <Toast
-                    show={showToast}
-                    onClose={toggleShowToast}
-                    delay={5000}
-                    autohide
-                    style={{
-                        backgroundColor: "limegreen",
-                        position: 'absolute',
-                        top: 0,
-                        right: 0,
-                    }}>
-                    <Toast.Header>
-                        <strong className="mr-auto">Dance class added!</strong>
-                    </Toast.Header>
-                </Toast>
-            </div>
-            <ListGroup style={{backgroundColor: "lightgray"}}>
+            <Toast
+                show={showToast}
+                onClose={toggleShowToast}
+                style={{marginTop: "1rem"}}>
+                <Toast.Header style={{ backgroundColor: "green", color: "white" }}>
+                    <strong className="mr-auto">Dance class added!</strong>
+                </Toast.Header>
+            </Toast>
+            <ListGroup style={{ backgroundColor: "lightgray" }}>
                 <ListGroup.Item
                     style={{
                         textAlign: "center",
-                        margin: "2rem 5rem 0 5rem"
+                        margin: "2rem 5rem 0 5rem",
+                        backgroundImage: `url(${ background })`
                     }}>
-                    <h3>Dance classes</h3>
+                    <h3 style={{color: "white"}}>Dance classes</h3>
                     {userInfo && userInfo.role === "admin" && <Button onClick={handleModal}>Add</Button>}
                 </ListGroup.Item>
-                <div 
+                <div
                     className="cards-flex"
                     style={{
-                    display: "flex",
-                    flexFlow: "wrap",
-                    margin: "0 4rem 0 4rem"
-                }}>
+                        display: "flex",
+                        flexFlow: "wrap",
+                        margin: "0 4rem 0 4rem"
+                    }}>
                     {classes.map(cls => <CourseCard key={cls.id} cls={cls}>
                         {userInfo && userInfo.role === "admin" && <Button onClick={() => handleDelete(cls.id)}><Trash /></Button>}
                     </CourseCard>)}
@@ -152,7 +139,7 @@ const AdminDanceList = ({ classes }) => {
                                     const date = e.target.valueAsDate
                                     date.setHours(0, 0, 0, 0)
                                     setStartDate(date)
-                                }}    
+                                }}
                             />
                         </Form.Group>
 
@@ -165,7 +152,7 @@ const AdminDanceList = ({ classes }) => {
                                     const date = e.target.valueAsDate
                                     date.setHours(23, 59, 59, 999)
                                     setEndDate(date)
-                                }} 
+                                }}
                             />
                         </Form.Group>
 

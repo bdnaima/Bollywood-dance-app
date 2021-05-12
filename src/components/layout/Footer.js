@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import cheers from '../../assets/images/cheers.jpg'
-import { Link } from 'react-router-dom';
 import { FaFacebook, FaPhoneAlt, FaInstagram } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 
@@ -11,13 +10,14 @@ const StyledFooter = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 10em;
+    margin-top: 10rem;
     height: 25rem;
 `;
 
 const Footer = () => {
     return (
         <StyledFooter>
+            <h1 style={{margin:"1rem", color: "white"}}>Contact</h1>
             <div id="footer-info">
                 <div className="circle">
                     <FaFacebook className="footer-icon" />
