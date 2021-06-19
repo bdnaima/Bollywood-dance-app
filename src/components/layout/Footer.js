@@ -11,13 +11,13 @@ const StyledFooter = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 10rem;
-    height: 25rem;
+    height: 29rem;
 `;
 
 const Footer = () => {
     return (
         <StyledFooter>
-            <h1 style={{margin:"1rem", color: "white"}}>Contact</h1>
+            <h1 style={{ margin: "1rem", color: "white", textAlign: "center", paddingTop: "2rem" }}>Contact</h1>
             <div id="footer-info">
                 <div className="circle">
                     <FaFacebook className="footer-icon" />

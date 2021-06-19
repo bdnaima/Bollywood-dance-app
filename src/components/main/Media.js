@@ -35,7 +35,7 @@ const Media = () => {
 
       {/* Card section */}
       <StyledCardGroup>
-        <StyledCard class="styledCard-margin" style={{ marginLeft: "0.2rem" }}>
+        <StyledCard className="styledCard-margin" style={{ marginLeft: "0.2rem" }}>
           <YoutubeEmbed embedId="3KHy-tSOVRA" />
         </StyledCard>
 

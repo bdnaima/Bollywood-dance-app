@@ -89,7 +89,7 @@ const AdminDanceList = ({ classes }) => {
                         backgroundImage: `url(${ background })`
                     }}>
                     <h3 style={{color: "white"}}>Dance classes</h3>
-                    {userInfo && userInfo.role === "admin" && <Button onClick={handleModal}>Add</Button>}
+                    {userInfo && userInfo.role === "admin" && <Button style={{backgroundColor:"purple"}} onClick={handleModal}>Add</Button>}
                 </ListGroup.Item>
                 <div
                     className="cards-flex"
