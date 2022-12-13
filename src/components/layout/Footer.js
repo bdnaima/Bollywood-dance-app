@@ -11,7 +11,12 @@ const StyledFooter = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 10rem;
-    height: 29rem;
+    height: 24rem;
+    
+
+    @media (max-width: 768px) {
+    height: 40rem;
+  }
 `;
 
 const Footer = () => {
@@ -22,26 +27,26 @@ const Footer = () => {
                 <div className="circle">
                     <FaFacebook className="footer-icon" />
                     <span className="footer-contact">
-                        <a href="https://www.facebook.com/groups/135916699759388">Join group</a>
+                        <a href="https://dance-app-9c409.web.app/">Join group</a>
                     </span>
                 </div>
 
                 <div className="circle">
                     <FaInstagram className="footer-icon" />
                     <span className="footer-contact">
-                        <a href="https://www.instagram.com/bollywoodshowgirls/?hl=en">Bollywood Showgirls</a>
+                        <a href="https://dance-app-9c409.web.app/">Ballet Showgroup</a>
                     </span>
                 </div>
                 <div className="circle">
                     <IoIosMail className="footer-icon" />
                     <span className="footer-contact">
-                        <a href="mailto:info@dansbollywood.se">info@dansbollywood.se</a>
+                        <a href="https://dance-app-9c409.web.app/">info@dansballet.se</a>
                     </span>
                 </div>
                 <div className="circle">
                     <FaPhoneAlt className="footer-icon" />
                     <span className="footer-contact">
-                        <a href="tel:0763499350">0763499350</a>
+                        <a href="https://dance-app-9c409.web.app/">0099889</a>
                     </span>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const Navigation = () => {
       sticky="top">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Link to="/">
-        <Navbar.Brand>Pooja's Bollywood Dance Academy</Navbar.Brand>
+        <Navbar.Brand>Dance Ballet Academy</Navbar.Brand>
       </Link>
 
       <Navbar.Collapse id="responsive-navbar-nav">

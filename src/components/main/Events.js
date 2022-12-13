@@ -6,7 +6,10 @@ import purple from '../../assets/images/purple.jpg'
 
 const StyledJumbotron = styled(Jumbotron)`
     background-image: url(${purple});
-    height: 30%;
+    height: 30rem;
+    @media (max-width: 768px) {
+    height: 10rem;
+  }
 `;
 
 const StyledCardGroup = styled(CardGroup)`
@@ -38,7 +41,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Workshops</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -49,7 +52,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Shows</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -60,7 +63,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Graduation parties</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -71,7 +74,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Bachelorette/Bachelor parties</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -82,7 +85,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Wedding</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -93,7 +96,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Holiday events</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -104,7 +107,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Business events</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -115,7 +118,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>Business events</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>
@@ -126,7 +129,7 @@ const Events = () => {
                         <Card.Body>
                             <Card.Title>School events</Card.Title>
                             <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum convallis tellus.
                             </Card.Text>
                             <Button variant="primary">Book</Button>
                         </Card.Body>

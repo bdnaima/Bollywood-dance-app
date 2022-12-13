@@ -3,11 +3,9 @@ import { CardGroup, Card, Jumbotron, Container, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ControlledCarousel from './ControlledCarousel'
 import styled from 'styled-components';
+import dance from '../../assets/images/dance-purple.jpg';
 import dancer from '../../assets/images/dancer.jpg'
-import anoli from '../../assets/images/anoli.jpg';
-import party from '../../assets/images/party.jpg';
-import media from '../../assets/images/media.jpg';
-import bhangra from '../../assets/images/bhangra.jpeg';
+
 
 const StyledCardGroup = styled(CardGroup)`
   margin: 4rem;
@@ -17,7 +15,7 @@ const StyledCardGroup = styled(CardGroup)`
 const StyledCard = styled(Card)`
   max-width: 18rem;
   transition: 0.5s;
-  background-color: rebeccapurple;
+  background: linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%);;
   box-shadow: 2px 3px 3px 3px indigo;
   color: white;
 
@@ -26,9 +24,16 @@ const StyledCard = styled(Card)`
     }
 `;
 
-const StyledJumbotron = styled(Jumbotron) `
+const StyledJumbotron = styled.div`
     background-image: url(${dancer});
-    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+
+    @media (max-width: 768px) {
+    height: 10rem;
+    max-width: 30rem;
+  }
 `;
 
 const Home = () => {
@@ -48,7 +53,7 @@ const Home = () => {
       <StyledCardGroup>
         <div className="styling-cards">
           <StyledCard style={{ alignSelf: "flex-start" }}>
-            <Card.Img variant="top" src={anoli} />
+            <Card.Img variant="top" src={dance} />
             <Card.Body>
               <Card.Title>Dance Classes</Card.Title>
               <Link to="/admin" className="stretched-link" />
@@ -66,7 +71,7 @@ const Home = () => {
             <p>Check out upcoming events. Book your own events.</p>
           </div>
           <StyledCard style={{ alignSelf: "flex-end" }}>
-            <Card.Img variant="top" src={party} />
+            <Card.Img variant="top" src={dance} />
             <Card.Body>
               <Card.Title>Events</Card.Title>
               <Link to="/events" className="stretched-link" />
@@ -76,7 +81,7 @@ const Home = () => {
 
         <div className="styling-cards">
           <StyledCard>
-            <Card.Img variant="top" src={media} />
+            <Card.Img variant="top" src={dance} />
             <Card.Body>
               <Card.Title>Media</Card.Title>
               <Link to="/media" className="stretched-link" />
@@ -94,7 +99,7 @@ const Home = () => {
             <p>Check out our gallery containing colorful pictures.</p>
           </div>
           <StyledCard style={{ alignSelf: "flex-end" }}>
-            <Card.Img variant="top" src={bhangra} />
+            <Card.Img variant="top" src={dance} />
             <Card.Body>
               <Card.Title>Gallery</Card.Title>
               <Link to="/gallery" className="stretched-link" />
@@ -105,13 +110,13 @@ const Home = () => {
 
       <StyledJumbotron fluid>
         <Container>
-          <Link to="/about"  
-                style={{
-                  fontSize: "3rem", 
-                  color: "white", 
-                  textDecoration: "none"
-                }} 
-                >About</Link>
+          <Link to="/about"
+            style={{
+              fontSize: "3rem",
+              color: "white",
+              textDecoration: "none",
+            }}
+          >About</Link>
         </Container>
       </StyledJumbotron>
     </>

@@ -1,15 +1,15 @@
 import React from 'react';
 import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
-import dance1 from '../../assets/images/dance1.jpeg';
-import dance2 from '../../assets/images/dance2.jpeg';
-import dance3 from '../../assets/images/dance3.jpeg';
-import dance4 from '../../assets/images/dance4.jpeg';
-import dance5 from '../../assets/images/dance5.jpeg';
-import dance6 from '../../assets/images/dance6.jpeg';
-import redDress from '../../assets/images/redDress.jpeg';
-import danceGroup from '../../assets/images/danceGroup.jpeg';
-import odissi from '../../assets/images/odissi.jpeg';
+import dance1 from '../../assets/images/dance-gada.jpg';
+import dance2 from '../../assets/images/slipper.jpg';
+import dance3 from '../../assets/images/bride.jpg';
+import dance4 from '../../assets/images/female.jpg';
+import dance5 from '../../assets/images/couple.jpg';
+import dance6 from '../../assets/images/dance-gada.jpg';
+import dance7 from '../../assets/images/slipper.jpg';
+import dance8 from '../../assets/images/female.jpg';
+import dance9 from '../../assets/images/bride.jpg';
 
 const StyledCardGroup = styled(CardGroup)`
   margin-left: 2rem;
@@ -17,7 +17,7 @@ const StyledCardGroup = styled(CardGroup)`
 
 const StyledCard = styled(Card)`
   min-width: 10rem;
-  margin: 4rem;
+  margin: 3.5rem;
 
   @media (max-width: 768px) {
     margin: 1rem;
@@ -54,15 +54,15 @@ const Gallery = () => {
         </StyledCard>
 
         <StyledCard>
-          <Card.Img variant="top" src={redDress} />
+          <Card.Img variant="top" src={dance7} />
         </StyledCard>
 
         <StyledCard>
-          <Card.Img variant="top" src={danceGroup} />
+          <Card.Img variant="top" src={dance8} />
         </StyledCard>
 
         <StyledCard>
-          <Card.Img variant="top" src={odissi} />
+          <Card.Img variant="top" src={dance9} />
         </StyledCard>
       </StyledCardGroup>
     </>
