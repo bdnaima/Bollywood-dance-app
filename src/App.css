@@ -123,14 +123,13 @@ body {
 /* Button settings */
 
 .btn-primary {
-    background-color: #fff;
-    border: 2px #fff ;
-    color: #000
+    background-color: rgb(120, 85, 137);
+    border: 2px rgb(120, 85, 137) ;
 }
 
 .btn-primary:hover {
-    background-color: rgb(115, 110, 117);
-    border: 2px solid rgb(115, 110, 117);
+    background-color: rgb(138, 120, 145);
+    border: 2px solid rgb(138, 120, 145);
 }
 
 .btn-signup a {

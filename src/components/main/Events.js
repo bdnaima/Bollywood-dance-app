@@ -33,7 +33,7 @@ const Events = () => {
 
             <Container>
                 <h1>Book Events</h1>
-                <p>We can be booked for most types of events, including bachelorette parties (Möhippa/Svensexa), weddings, workshops, christmas dinners, birthday parties, and corporate events. We do regular shows in Denmark as well!</p>
+                <p>We can be booked for most types of events, including bachelorette parties, weddings, workshops, christmas dinners, birthday parties, and corporate events. We do regular shows in Denmark as well!</p>
 
                 <StyledCardGroup>
                     <StyledCard style={{ marginLeft: "0.2rem" }}>
