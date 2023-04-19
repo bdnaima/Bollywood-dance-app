@@ -2,7 +2,7 @@ import React from 'react';
 import { CardGroup, Card } from 'react-bootstrap';
 import styled from 'styled-components';
 import YoutubeEmbed from "./YoutubeEmbed";
-import danceVideo from '../../assets/images/videoplayback.mp4'
+import danceVideo from '../../assets/images/ballet-video.mp4'
 
 const StyledCardGroup = styled(CardGroup)`
   margin-left: 2rem;
@@ -36,27 +36,27 @@ const Media = () => {
       {/* Card section */}
       <StyledCardGroup>
         <StyledCard className="styledCard-margin" style={{ marginLeft: "0.2rem" }}>
-          <YoutubeEmbed embedId="3KHy-tSOVRA" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
 
         <StyledCard>
-          <YoutubeEmbed embedId="Oc2UPtPgfQ8" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
 
         <StyledCard>
-          <YoutubeEmbed embedId="BpqgFyEdFMs" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
 
         <StyledCard>
-          <YoutubeEmbed embedId="tWuWTWwkMEo" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
 
         <StyledCard>
-          <YoutubeEmbed embedId="tUAbzwLN5ro" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
 
         <StyledCard>
-          <YoutubeEmbed embedId="5cRHt3AaUuU" />
+          <YoutubeEmbed embedId="zV1qLYukTH8" />
         </StyledCard>
       </StyledCardGroup>
     </>

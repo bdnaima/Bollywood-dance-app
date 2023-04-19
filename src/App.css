@@ -14,7 +14,7 @@ body {
 }
 
 .bg-dark {
-    background-color: rebeccapurple!important;
+    background: linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%)!important;
 }
 
 .dropdown-link {
@@ -123,17 +123,17 @@ body {
 /* Button settings */
 
 .btn-primary {
-    background-color: indigo;
-    border: 2px solid indigo;
+    background-color: rgb(120, 85, 137);
+    border: 2px rgb(120, 85, 137) ;
 }
 
 .btn-primary:hover {
-    background-color: darkorchid;
-    border: 2px solid darkorchid;
+    background-color: rgb(138, 120, 145);
+    border: 2px solid rgb(138, 120, 145);
 }
 
 .btn-signup a {
-    color: white;
+    color: #000;
     text-decoration: none;
 }
 
@@ -221,12 +221,13 @@ body {
         flex-direction: column;
         align-items: center;
         padding-top: 0;
+        height: 30rem;
     }
 
     .footer-icon {
         color: white; 
         margin: 1.1rem; 
-        font-size: 1.1rem;
+        font-size: 20px;
     }
 
     .footer-contact {
