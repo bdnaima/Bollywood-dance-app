@@ -25,6 +25,7 @@ yarn-error.log*
 
 # Firebase cache
 .firebase/
+.firebase/hosting.YnVpbGQ.cache
 
 # esLint
 .eslintcache
