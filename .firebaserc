@@ -1,11 +1,5 @@
 {
   "projects": {
-    "default": "dance-app-9c409",
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "default": "dance-app-9c409"
   }
 }
