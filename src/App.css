@@ -1,247 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=sw');
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=sw");
 
 body {
-    background-color: #FFFAFA;
-    /* background-image: url("./assets/images/purple.jpg"); */
+  background-color: #fffafa;
+  /* background-image: url("./assets/images/purple.jpg"); */
 }
 
 .navbar-brand {
-    font-family: satisfy;
+  font-family: satisfy;
 }
 
 .nav-link {
-    color: white;
+  color: white;
 }
 
 .bg-dark {
-    background: linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%)!important;
+  background: linear-gradient(
+    180.2deg,
+    rgb(120, 85, 137) -6.9%,
+    rgb(35, 9, 31) 76.7%
+  ) !important;
 }
 
 .dropdown-link {
-    color: black;
+  color: black;
 }
 
 .dropdown-item a {
-    background-color: rebeccapurple;
+  background-color: rebeccapurple;
 }
 
 #anchor-white {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.jumbotron-ballet {
+  height: 39rem;
+  margin-top: 2rem;
+  background-image: url("./assets/images/ballet-dance.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron-ballet h3 {
+  color: #fffafa;
+  padding: 1rem;
 }
 
 .jumbotron-fluid {
-    background: rebeccapurple;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    color: white;
-    opacity: 0.8;
+  background: rebeccapurple;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  color: white;
+  opacity: 0.8;
 }
 
 .jumbotron-style {
-    background-color: lightgray;
-    opacity: 1;
+  background-color: lightgray;
+  opacity: 1;
 }
 
 .styling-cards {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .styling-text {
-    align-self: center;
+  align-self: center;
 }
 
 .signup-look {
-    color: black;
+  color: black;
 }
 
 .signup-look:hover {
-    color: white;
+  color: white;
 }
 
 /* Form settings */
 
 .admin-container {
-    max-width: 600px;
-    margin-top: 1rem;
-    padding: 0 3rem 0 3rem;
-    border: 2px solid purple;
-    background-color: white;
+  max-width: 600px;
+  margin-top: 1rem;
+  padding: 0 3rem 0 3rem;
+  border: 2px solid purple;
+  background-color: white;
 }
 
 .form-check-label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Calendar Settings */
 
 .calendar {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-gap: 10px;
-    padding: 10px;
-    max-width: 800px;
-    margin: auto;
-    background-color: whitesmoke;
-    color: black;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  max-width: 800px;
+  margin: auto;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .calendar > div {
-    text-align: center;
-    padding: 10px 0;
-  }
+  text-align: center;
+  padding: 10px 0;
+}
 
 .month {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 2rem;
-    padding: 2em;
-    /* background-image: url("./assets/images/purple.jpg"); */
-    background-color:gray;
-    color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2em;
+  /* background-image: url("./assets/images/purple.jpg"); */
+  background-color: gray;
+  color: whitesmoke;
 }
 
 .month h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .days {
-    transition: background-color 0.1s;
-    border-radius: 20px;
+  transition: background-color 0.1s;
+  border-radius: 20px;
 }
 
 .days:hover {
-    background-color: indigo;
-    color: white;
-    cursor: pointer;
+  background-color: indigo;
+  color: white;
+  cursor: pointer;
 }
 
 /* Button settings */
 
 .btn-primary {
-    background-color: rgb(120, 85, 137);
-    border: 2px rgb(120, 85, 137) ;
+  background-color: rgb(120, 85, 137);
+  border: 2px rgb(120, 85, 137);
 }
 
 .btn-primary:hover {
-    background-color: rgb(138, 120, 145);
-    border: 2px solid rgb(138, 120, 145);
+  background-color: rgb(138, 120, 145);
+  border: 2px solid rgb(138, 120, 145);
 }
 
 .btn-signup a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .logging-in {
-    text-align: center;
-    margin-top: 2em;
+  text-align: center;
+  margin-top: 2em;
 }
 /* YouTube uploads */
 .video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-  }
-  
-  .video-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
 /* Footer section */
 #footer-info {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5rem;
 }
 
 .footer-contact {
-    display: block;
-    padding-top: 2rem;
+  display: block;
+  padding-top: 2rem;
 }
 
 .footer-contact a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-icon {
-    color: white; 
-    margin: 2.2rem; 
-    font-size: 2rem;
+  color: white;
+  margin: 2.2rem;
+  font-size: 2rem;
 }
 
 .circle {
-    background: purple;;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+  background: purple;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
-/* Media queries **/ 
+/* Media queries **/
 @media (max-width: 768px) {
+  .navbar-text {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
 
-    .navbar-text {
-        margin-left: auto;
-        margin-right: 1rem;
-    }
+  #anchor-white {
+    margin-left: 0;
+  }
 
-    #anchor-white {
-        margin-left: 0;
-    }
+  .jumbotron-ballet {
+    height: 15rem;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  .jumbotron-ballet h3 {
+    color: #fffafa;
+    padding: 1rem;
+  }
 
-    .cards-flex {
-        flex-direction: column;
-        align-items: center;
-    }
+  .cards-flex {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .styling-cards {
-        flex-wrap: wrap;
-    }
+  .styling-cards {
+    flex-wrap: wrap;
+  }
 
-    .styling-text {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+  .styling-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-    .flip {
-        flex-wrap: wrap-reverse;
-    }
-    
-    #footer-info {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 0;
-        height: 30rem;
-    }
+  .flip {
+    flex-wrap: wrap-reverse;
+  }
 
-    .footer-icon {
-        color: white; 
-        margin: 1.1rem; 
-        font-size: 20px;
-    }
+  #footer-info {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    height: 30rem;
+  }
 
-    .footer-contact {
-        display: inline;
-        padding-top: 2rem;
-    }
+  .footer-icon {
+    color: white;
+    margin: 1.1rem;
+    font-size: 20px;
+  }
 
-    .circle {
-       margin: 1rem 0 2rem 0;
-       width: 50px;
-       height: 50px;
-    }
+  .footer-contact {
+    display: inline;
+    padding-top: 2rem;
+  }
 
-    .styledCard-margin {
-        margin-left: 0;
-    }
+  .circle {
+    margin: 1rem 0 2rem 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .styledCard-margin {
+    margin-left: 0;
+  }
 }
